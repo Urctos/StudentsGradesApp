@@ -18,9 +18,23 @@
 
         public abstract void AddGrade(float grade);
 
-        public abstract void AddGrade(string grade);
+        public void AddGrade(string grade)
+        {
+            if (float.TryParse(grade, out float result))
+            {
+                this.AddGrade(result);
+            }
+            else
+            {
+                throw new Exception("Nie da się wczyatć oceny! - napis nie jest liczbą ");
+            }
+        }
 
-        public abstract void AddGrade(int grade);
+        public void AddGrade(int grade)
+        {
+            float result = (float)grade;
+            this.AddGrade(result);
+        }
 
         public abstract Statistics GetStatistics();
 

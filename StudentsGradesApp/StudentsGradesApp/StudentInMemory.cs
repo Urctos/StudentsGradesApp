@@ -29,24 +29,6 @@
             }
         }
 
-        public override void AddGrade(string grade)
-        {
-            if (float.TryParse(grade, out float result))
-            {
-                this.AddGrade(result);
-            }
-            else
-            {
-                throw new Exception("Nie da się wczyatć oceny! - napis nie jest liczbą ");
-            }
-        }
-
-        public override void AddGrade(int grade)
-        {
-            float result = (float)grade;
-            this.AddGrade(result);
-        }
-
         public override Statistics GetStatistics()
         {
             var statistics = new Statistics();

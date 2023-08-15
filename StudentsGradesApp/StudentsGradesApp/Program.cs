@@ -1,5 +1,4 @@
 ﻿using StudentsGradesApp;
-using System.Runtime.CompilerServices;
 
 Console.WriteLine("***********************************************************************");
 Console.WriteLine("Program do wyliczania ocen studentów!");
